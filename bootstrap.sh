@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # bootstrap script
-# install fish and invoke fish bootstrap script
+# install fish, invoke fish bootstrap script, and `exec` fish
 
 # bash best practices
 set -o errexit # exit on error
@@ -29,5 +29,10 @@ brew install fish
 
 chsh -s "$(which fish)" "$(whoami)"
 
+ORIGINAL_PWD="$(pwd)"
 cd $(realpath $0 | sed -e 's/bootstrap\.sh$//')
 fish ./bootstrap.fish
+
+echo "bootstrap: done"
+
+cd "$ORIGINAL_PWD"

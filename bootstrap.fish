@@ -1,3 +1,5 @@
+#!/usr/bin/env fish
+
 # set greeting to something cute and friendly
 set -U fish_greeting "              ,---------------------------,
               |  /---------------------\  |
@@ -55,3 +57,5 @@ if test -x ./affirm_dotfiles/boostrap.fish
 else
     echo "bootstrap: warning: affirm bootstrap script not found"
 end
+
+source ~/.config/fish/config.fish
