@@ -36,3 +36,5 @@ fish ./bootstrap.fish
 echo "bootstrap: done"
 
 cd "$ORIGINAL_PWD"
+
+exec "$(which fish)"
