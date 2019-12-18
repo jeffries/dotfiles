@@ -1,3 +1,6 @@
 # Command Line Configuration
-Configuration to make my command line feel familiar.
+```
+exec bash ./bootstrap.sh
+```
+...and you're done
 
