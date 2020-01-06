@@ -27,14 +27,22 @@ brew --version
 echo "bootstrap: installing fish"
 brew install fish
 
+# Change shell to fish
 chsh -s "$(which fish)" "$(whoami)"
 
+# Record the original working directory
 ORIGINAL_PWD="$(pwd)"
+
+# Go to dotfiles repo
 cd $(realpath $0 | sed -e 's/bootstrap\.sh$//')
+
+# Run fish bootstrap script
 fish ./bootstrap.fish
 
 echo "bootstrap: done"
 
 cd "$ORIGINAL_PWD"
 
+# Replace bash with fish
 exec "$(which fish)"
+
