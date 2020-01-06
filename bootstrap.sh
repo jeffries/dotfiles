@@ -23,7 +23,7 @@ fi
 echo "bootstrap: homebrew is installed"
 brew --version
 
-# Install fish
+# install fish
 echo "bootstrap: installing fish"
 brew install fish
 
